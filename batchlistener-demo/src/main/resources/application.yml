@@ -1,0 +1,11 @@
+spring:
+  kafka:
+    listener:
+      missing-topics-fatal: false
+    bootstrap-servers: 192.168.56.101:9092
+    producer:
+      transaction-id-prefix: tx.
+    consumer:
+      isolation-level: read_committed
+      group-id: aaaa
+      auto-offset-reset: earliest

@@ -1,0 +1,9 @@
+spring:
+  kafka:
+    listener:
+      missing-topics-fatal: false
+    bootstrap-servers: 192.168.56.101:9092
+    producer:
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      properties:
+        spring.json.type.mapping: foo:com.lynseries.demo.springboot.Hello,bar:com.lynseries.demo.springboot.HelloWorld
